@@ -20,32 +20,42 @@ class Home extends Component{
     startLoading = () => {
         this.setState({ isProgressing : true })
         if(!this.state.isProgressing){
-            timer = setInterval(() => {
-                this.setState({ progress: this.state.progress + 1 }, () => {
-                    if(this.state.progress == 100){
-                        clearInterval(timer)
-                    }
+            if(this.state.progress < 100){
+                this.startCounter()
+            }else{
+                this.setState({ progress: 0 },() => {
+                    this.startCounter()
                 })
-            }, 100)
+            }
         }
+    }
+
+    startCounter = () => {
+        timer = setInterval(() => {
+            this.setState({ progress: this.state.progress + 1 }, () => {
+                if(this.state.progress == 100){
+                    this.pauseLoading()
+                }
+            })
+        }, 100)
     }
 
     pauseLoading = () => {
-        this.setState({ isProgressing : false })
-        if(timer){
-            clearInterval(timer)
-        }
+        this.setState({ isProgressing : false }, () => {
+            if(timer){
+                clearInterval(timer)
+            }
+        })
     }
 
     render(){
-        console.log(this.state.progress)
         return(
             <div className="home-container">
-                <div className="content-container">
+                <div data-testid="circular-loader-component" className="content-container">
                     <Loader progress={this.state.progress} size={80} strokeWidth={10} outerStroke="#ddfff8" innerStroke="#02C39A" fill="#FFFFFF" fontSize={30}/>
                     <div className="buttons">
-                        <div className="btn" onClick={this.startLoading}>Start</div>
-                        <div className="btn" onClick={this.pauseLoading}>Pause</div>
+                        <div data-testid="start-button" className="btn" onClick={this.startLoading}>Start</div>
+                        <div data-testid="pause-button" className="btn" onClick={this.pauseLoading}>Pause</div>
                     </div>
                 </div>
             </div>

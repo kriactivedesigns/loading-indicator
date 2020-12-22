@@ -4,7 +4,7 @@
         height: 100%;
         position: relative;
         .loader-inner-circle{
-            transition: 250ms;
+            transition: 100ms;
             transform: rotate(90deg);
             transform-origin:  50% 50%;
         }

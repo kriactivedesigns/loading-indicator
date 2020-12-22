@@ -17,7 +17,7 @@ export default class Loader extends Component {
         const { progress, size=60, strokeWidth=4, outerStroke="#FF0000", innerStroke="#00FF00", fill="#FFFFFF", fontSize=25 } = this.props
         const circumference = (this.props.size - ( strokeWidth * 2 ) ) * 2 * Math.PI
         const offset = circumference - progress / 100 * circumference
-        console.log(offset)
+        
         return ( 
             <div className="loader-component" >
                 <div className="loader-circle-container" style={{
