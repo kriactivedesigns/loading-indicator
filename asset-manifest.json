@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-loading-indicator/static/css/main.7a3352ba.chunk.css",
+    "main.js": "/react-loading-indicator/static/js/main.d43275d0.chunk.js",
+    "main.js.map": "/react-loading-indicator/static/js/main.d43275d0.chunk.js.map",
+    "runtime-main.js": "/react-loading-indicator/static/js/runtime-main.faacafef.js",
+    "runtime-main.js.map": "/react-loading-indicator/static/js/runtime-main.faacafef.js.map",
+    "static/js/2.f4468ca8.chunk.js": "/react-loading-indicator/static/js/2.f4468ca8.chunk.js",
+    "static/js/2.f4468ca8.chunk.js.map": "/react-loading-indicator/static/js/2.f4468ca8.chunk.js.map",
+    "index.html": "/react-loading-indicator/index.html",
+    "static/css/main.7a3352ba.chunk.css.map": "/react-loading-indicator/static/css/main.7a3352ba.chunk.css.map",
+    "static/js/2.f4468ca8.chunk.js.LICENSE.txt": "/react-loading-indicator/static/js/2.f4468ca8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.faacafef.js",
+    "static/js/2.f4468ca8.chunk.js",
+    "static/css/main.7a3352ba.chunk.css",
+    "static/js/main.d43275d0.chunk.js"
+  ]
+}
